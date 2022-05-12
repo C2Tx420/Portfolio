@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'AP';
+    src: local('Ayer Poster Regular'), local('Ayer-Poster-Regular'),
+        url('AyerPoster-Regular.woff2') format('woff2'),
+        url('AyerPoster-Regular.woff') format('woff'),
+        url('AyerPoster-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: fallback;
+  }
+@font-face {
+  font-family: 'HN';
+  src: local('Helvetica Neue Medium'), local('Helvetica-Neue-Medium'),
+  url('HelveticaNeueCyr-Medium.woff2') format('woff2'),
+  url('HelveticaNeueCyr-Medium.woff') format('woff'),
+  url('HelveticaNeueCyr-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: fallback;
+}

@@ -1,0 +1,59 @@
+<app-loading></app-loading>
+<app-cursor></app-cursor>
+<main>
+  <div class="container">
+  <div class="left-col">
+    <div class="finger hv"><object type="image/svg+xml" data="assets/img/icon/fingerprint.svg"></object></div>
+    <div class="heading">
+    <div class="heading__main-text"><h1>CHECKOUT</h1></div>
+    <div routerLink="/" class="btn back-btn hv">
+      <object type="image/svg+xml" data="assets/img/icon/arrow.svg"></object>
+      <span>BACK TO ADDRESS</span></div>
+    </div>
+    <div class="price">
+      <span>TOTAL</span>
+      <span>1900 hồi đó</span>
+    </div>
+  </div>
+  <div class="right-col">
+      <div class="nav">
+        <div class="nav__item">SHOPPING</div>
+        <object type="image/svg+xml" data="assets/img/icon/arrow.svg">test</object>
+        <div class="nav__item">ADDRESS</div>
+        <object type="image/svg+xml" data="assets/img/icon/arrow.svg">test</object>
+        <div class="nav__item active">CHECKOUT</div>
+      </div>
+      <div class="card"><img src="assets/img/card.png" alt="checkout-card"></div>
+      <div [formGroup]="checkOutForm" class="checkout-form">
+        <div class="checkout-form__row">
+          <input formControlName="cardNumber" placeholder="CARD NUMBER">
+          <div class="error-text" *ngIf="checkOutForm.controls['cardNumber'].invalid &&
+        (checkOutForm.controls['cardNumber'].dirty || checkOutForm.controls['cardNumber'].touched)">
+            <small *ngIf="checkOutForm.controls['cardNumber'].hasError('required')">
+              This field is required.**
+            </small>
+          </div>
+        </div>
+        <div class="checkout-form__row">
+          <input formControlName="date" placeholder="DATE">
+          <div class="error-text" *ngIf="checkOutForm.controls['date'].invalid &&
+        (checkOutForm.controls['date'].dirty || checkOutForm.controls['date'].touched)">
+          <small *ngIf="checkOutForm.controls['date'].hasError('required')">
+            This field is required.**
+          </small>
+        </div>
+          <input formControlName="cvv" [maxlength]="3" placeholder="CVV">
+          <div class="error-text-cvv" *ngIf="checkOutForm.controls['cvv'].invalid &&
+        (checkOutForm.controls['cvv'].dirty || checkOutForm.controls['cvv'].touched)">
+            <small *ngIf="checkOutForm.controls['cvv'].hasError('required')">
+              This field is required.**
+            </small>
+          </div>
+        </div>
+        <div (click)="checkOutSubmit()" class="btn checkout-btn hv">CHECKOUT</div>
+      </div>
+  </div>
+  </div>
+</main>
+
+

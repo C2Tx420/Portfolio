@@ -1,0 +1,61 @@
+@-ms-viewport {
+  width: device-width;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: auto;
+  background: $white-cl;
+  position: relative;
+  @include text(1.6rem, 'arial', 2.6rem, $black-cl, none);
+  .container-fluid {
+    width: 100%;
+    padding-right: var(--gap);
+    padding-left: var(--gap);
+    margin-right: auto;
+    margin-left: auto;
+    @media (max-width: 767px) {
+      padding-right: calc(var(--gap) / 2);
+      padding-left: calc(var(--gap) / 2);
+    }
+  }
+
+  .container {
+    width: 100%;
+    padding-right: calc(var(--gap) / 2);
+    padding-left: calc(var(--gap) / 2);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (max-width: 575px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (max-width: 767px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (max-width: 991px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .container {
+      max-width: $container-width;
+    }
+  }
+}

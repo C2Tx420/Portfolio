@@ -1,0 +1,28 @@
+@import 'mixxin';
+$white-cl: #fff;
+$black-cl: #000;
+$bg-cl: #0E0E0E;
+
+$container-max-width: 100%;
+$container-width: 1440px;
+
+:root {
+  --gap: 30px;
+
+  --height-header: 80px;
+  --height-button: 56px;
+  --ptop: 150px;
+  --pd-section: 120px;
+
+  @media (max-width: 991px) {
+
+  }
+  @media (max-width: 767px) {
+
+    --gap: 20px;
+
+    --height-header: 70px;
+    --pd-section: 50px;
+    --ptop: 120px;
+  }
+}

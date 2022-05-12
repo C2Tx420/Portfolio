@@ -1,0 +1,25 @@
+@import "../../../assets/scss/variable";
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  overflow: hidden;
+  h1{
+    color: $white-cl;
+    font-family: 'HN', sans-serif;
+    white-space: nowrap;
+    line-height: 100%;
+
+    text-align: left;
+    mix-blend-mode: difference;
+  }
+  &.not-found{
+    border: 1px solid #ccc;
+    h1{
+      font-size: 20rem;
+      padding: 50px 0px;
+    }
+  }
+}

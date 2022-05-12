@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CursorComponent } from './components/cursor/cursor.component';
 import { HorizontalTextComponent } from './components/horizontal-text/horizontal-text.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     HeaderComponent,
     CursorComponent,
     HorizontalTextComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeroSectionComponent
   ],
   imports: [
     BrowserModule,

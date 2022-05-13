@@ -1,18 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  BoxBufferGeometry,
-  CircleGeometry,
-  Clock,
-  Color,
-  Mesh,
-  MeshBasicMaterial, MeshStandardMaterial,
+  AmbientLight,
+  Color, DirectionalLight,
   PerspectiveCamera,
   Scene,
   WebGLRenderer
 } from "three";
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
-import {OBJLoader} from "three/examples/jsm/loaders/OBJLoader";
-import {MTLLoader} from "three/examples/jsm/loaders/MTLLoader";
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 
 @Component({
   selector: 'app-hero-section',
@@ -24,10 +19,10 @@ export class HeroSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.renderCube();
+    setTimeout(this.initThree,1500)
   }
 
-  renderCube() {
+  initThree() {
     const scene = new Scene();
 
     const threeContainer: any = document.querySelector('.hero__right');
@@ -41,15 +36,38 @@ export class HeroSectionComponent implements OnInit {
 
     const camera = new PerspectiveCamera(fov, aspect, near, far);
 
-    camera.position.set(0, 0, 5);
+    camera.position.set(-9, 3, -0.2);
 
-    const geometry = new BoxBufferGeometry(2, 4, 2);
+    camera.rotation.set(0, -90, 0)
 
-    const material = new MeshBasicMaterial({color:'#fff'});
+    //ambient light
+    const light = new AmbientLight( 0xFFFAFAFA );
 
-    const cube = new Mesh(geometry, material);
+    scene.add( light );
 
-    scene.add(cube);
+    const directionLight = new DirectionalLight(0xFFFFB74D, 0.5)
+
+    directionLight.position.set(-20,12,4)
+
+    scene.add(directionLight);
+
+    // scene.add(cube);
+
+    const loader = new GLTFLoader()
+
+    loader.load(
+      'assets/model/scene.glb',
+      function (gltf) {
+
+        scene.add(gltf.scene)
+
+        animate()
+      }, undefined, function ( error ) {
+
+        console.error( error );
+
+      }
+    );
 
 
     const renderer = new WebGLRenderer();
@@ -62,20 +80,17 @@ export class HeroSectionComponent implements OnInit {
 
     renderer.render(scene, camera);
 
-    const clock = new Clock()
+    const orbitControls = new OrbitControls(camera, renderer.domElement);
+
+    orbitControls.autoRotate = true;
 
     const animate = () => {
-      const elapsedTime = clock.getElapsedTime()
+      orbitControls.update();
 
+      renderer.render( scene, camera );
 
-      cube.rotation.y = .5 * elapsedTime
-
-      renderer.render(scene, camera)
-
-      window.requestAnimationFrame(animate)
+      requestAnimationFrame( animate );
     }
-
-    animate()
   }
 
 

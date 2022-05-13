@@ -34,10 +34,12 @@
     width: 50%;
     height: 100%;
 
-    margin-top: 20px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    & .model{
+      width: 400px;
+      height: 400px;
+    }
   }
 }

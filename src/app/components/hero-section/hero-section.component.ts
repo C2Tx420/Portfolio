@@ -25,7 +25,7 @@ export class HeroSectionComponent implements OnInit {
   initThree() {
     const scene = new Scene();
 
-    const threeContainer: any = document.querySelector('.hero__right');
+    const threeContainer: any = document.querySelector('.hero__right .model');
 
     scene.background = new Color('#0E0E0E')
 
@@ -36,7 +36,7 @@ export class HeroSectionComponent implements OnInit {
 
     const camera = new PerspectiveCamera(fov, aspect, near, far);
 
-    camera.position.set(3 , 0.5, 0);
+    camera.position.set(1.4, 0, 0);
 
     camera.rotation.set(0, 90, 0)
 
@@ -58,6 +58,8 @@ export class HeroSectionComponent implements OnInit {
     loader.load(
       'assets/model/scene.glb',
       function (gltf) {
+
+        gltf.scene.position.set(0,-0.4, 0)
 
         scene.add(gltf.scene)
 
@@ -81,6 +83,8 @@ export class HeroSectionComponent implements OnInit {
     renderer.render(scene, camera);
 
     const orbitControls = new OrbitControls(camera, renderer.domElement);
+
+    orbitControls.enabled = false;
 
     orbitControls.autoRotate = true;
 

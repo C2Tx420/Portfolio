@@ -19,7 +19,7 @@ export class HeroSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    setTimeout(this.initThree,1500)
+    setTimeout(this.initThree,2000)
   }
 
   initThree() {
@@ -29,16 +29,16 @@ export class HeroSectionComponent implements OnInit {
 
     scene.background = new Color('#0E0E0E')
 
-    const fov = 75;
+    const fov = 50;
     const aspect = threeContainer.clientWidth / threeContainer.clientHeight;
     const near = 0.1;
     const far = 1000;
 
     const camera = new PerspectiveCamera(fov, aspect, near, far);
 
-    camera.position.set(-9, 3, -0.2);
+    camera.position.set(3 , 0.5, 0);
 
-    camera.rotation.set(0, -90, 0)
+    camera.rotation.set(0, 90, 0)
 
     //ambient light
     const light = new AmbientLight( 0xFFFAFAFA );

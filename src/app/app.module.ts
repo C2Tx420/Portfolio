@@ -12,6 +12,7 @@ import { CursorComponent } from './components/cursor/cursor.component';
 import { HorizontalTextComponent } from './components/horizontal-text/horizontal-text.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import {FashionModule} from "./pages/fashion/fashion.module";
 
 @NgModule({
   declarations: [
@@ -23,12 +24,13 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
     CursorComponent,
     HorizontalTextComponent,
     NotFoundComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FashionModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

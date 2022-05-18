@@ -16,3 +16,11 @@
   font-weight: 500;
   font-style: fallback;
 }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('Ubuntu-Regular.woff2') format('woff2'),
+  url('Ubuntu-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}

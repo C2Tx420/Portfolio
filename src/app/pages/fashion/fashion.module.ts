@@ -8,6 +8,9 @@ import { FashionInputComponent } from '../../components/fashion/fashion-input/fa
 import { FashionCartComponent } from '../../components/fashion/fashion-cart/fashion-cart.component';
 import { FashionWishlistComponent } from '../../components/fashion/fashion-wishlist/fashion-wishlist.component';
 import { FashionUserComponent } from '../../components/fashion/fashion-user/fashion-user.component';
+import { FashionHeroComponent } from '../../components/fashion/fashion-hero/fashion-hero.component';
+import { FashionContentBlockComponent } from '../../components/fashion/fashion-content-block/fashion-content-block.component';
+import { FashionButtonComponent } from '../../components/fashion/fashion-button/fashion-button.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { FashionUserComponent } from '../../components/fashion/fashion-user/fash
     FashionInputComponent,
     FashionCartComponent,
     FashionWishlistComponent,
-    FashionUserComponent
+    FashionUserComponent,
+    FashionHeroComponent,
+    FashionContentBlockComponent,
+    FashionButtonComponent
   ],
   imports: [
     CommonModule,

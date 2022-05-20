@@ -1,0 +1,39 @@
+@import "../../../../assets/scss/variable";
+
+.ads-card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  &__img{
+    height: 100%;
+    & img{
+      height: 100%;
+    }
+  }
+  &.bg{
+    background-image: url("../../../../assets/img/fashion/card-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.size{
+    &-s{
+      height: 300px;
+      padding-left: 50px;
+      padding-right: 25px;
+    }
+    &-l{
+      height: 493px;
+      padding-left: 140px;
+      padding-right: 102px;
+    }
+  }
+  &.color{
+    &-blue{
+      background: radial-gradient(64% 195.84% at 96.3% 9%, #6CDDFF 0%, #58C4E4 100%)
+    }
+    &-yl{
+      background: radial-gradient(97.53% 455.04% at 0% 100%, #FBD103 70.66%, #FFE14B 100%)
+    }
+  }
+}

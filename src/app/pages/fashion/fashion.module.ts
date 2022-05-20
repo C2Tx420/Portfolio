@@ -11,6 +11,8 @@ import { FashionUserComponent } from '../../components/fashion/fashion-user/fash
 import { FashionHeroComponent } from '../../components/fashion/fashion-hero/fashion-hero.component';
 import { FashionContentBlockComponent } from '../../components/fashion/fashion-content-block/fashion-content-block.component';
 import { FashionButtonComponent } from '../../components/fashion/fashion-button/fashion-button.component';
+import { FashionAdsComponent } from '../../components/fashion/fashion-ads/fashion-ads.component';
+import { FashionAdsCardComponent } from '../../components/fashion/fashion-ads-card/fashion-ads-card.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { FashionButtonComponent } from '../../components/fashion/fashion-button/
     FashionUserComponent,
     FashionHeroComponent,
     FashionContentBlockComponent,
-    FashionButtonComponent
+    FashionButtonComponent,
+    FashionAdsComponent,
+    FashionAdsCardComponent
   ],
   imports: [
     CommonModule,

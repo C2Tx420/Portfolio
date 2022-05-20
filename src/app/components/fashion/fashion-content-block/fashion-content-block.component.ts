@@ -11,13 +11,17 @@ export class FashionContentBlockComponent implements OnInit {
 
   @Input() subText ?: string;
 
-  @Input() style : string = '1';
+  @Input() subBText ?: string;
+
+  @Input() subText2 ?: string;
+
+  @Input() style : string = 'banner';
 
   @Input() img ?: string;
 
   @Input() btnSize : string = 's';
 
-  @Input() btnColor: string = 'white';
+  @Input() color: string = 'white';
 
   constructor() { }
 

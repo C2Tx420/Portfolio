@@ -20,7 +20,7 @@
     opacity: .5;
     }
   }
-  &-1{
+  &-banner{
     .content-block__main{
     order: 2;
     }
@@ -30,5 +30,8 @@
     .content-block__btn{
       order: 3;
     }
+  }
+  &-ads-card-small{
+
   }
 }

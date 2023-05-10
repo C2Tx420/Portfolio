@@ -1,7 +1,7 @@
 @import '../../../assets/scss/variable';
 
 .hero{
-  height: calc(100vh - var(--height-header));
+  height: 100%;
   padding: 20px 0;
 
   display: flex;

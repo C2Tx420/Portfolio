@@ -1,5 +1,6 @@
 @import '../../../assets/scss/variable';
-main{
- background: $bg-cl;
-  height: 100vh;
+
+main {
+  background: $bg-cl;
+  height: calc(100vh - var(--height-header));
 }

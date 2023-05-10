@@ -22,7 +22,6 @@ export class CheckoutComponent implements OnInit {
   }
 
   animate() {
-    setTimeout(()=>{
       const timeline = gsap.timeline()
       const heading : any = document.querySelector('.heading__main-text h1')
       heading.innerHTML = heading.textContent.replace(
@@ -43,7 +42,6 @@ export class CheckoutComponent implements OnInit {
         .from('.back-btn',{duration:1,y:50,opacity:0,delay:.1},1)
         .from('.right-col',{duration:1,y:50,opacity:0},2)
         .from('.price',{duration:1,y:50,opacity:0, delay:.1},2)
-    },3000)
   }
 
   public buildForm() {

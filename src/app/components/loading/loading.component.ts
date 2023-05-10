@@ -10,7 +10,7 @@ import {gsap} from  'gsap'
 export class LoadingComponent implements OnInit {
 
   ngOnInit(): void {
-    this.loadingAnimation()
+    this.loadingAnimation();
   }
 
   loadingAnimation(){
@@ -28,5 +28,4 @@ export class LoadingComponent implements OnInit {
       .to('.text-logo ',{opacity:0,duration:.5,delay:2},1)
       .to('.loading',{height:0,duration:1,delay:2},1)
   }
-
 }

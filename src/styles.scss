@@ -3,3 +3,8 @@
   @import 'assets/scss/variable';
   @import 'assets/scss/layout';
   @import "assets/fonts/font.css";
+
+body{
+  background: $bg-cl;
+  color: $white-cl;
+}

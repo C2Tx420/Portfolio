@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { AboutComponent } from './pages/about/about.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { LoadingComponent } from './components/loading/loading.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -13,11 +13,13 @@ import { HorizontalTextComponent } from './components/horizontal-text/horizontal
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { CursorService } from './service/active-cursor.service';
+import { ProjectCard } from './components/project-card/project-card.component';
+import { ProjectSectionComponent } from './components/project-section/project-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CheckoutComponent,
+    AboutComponent,
     LoadingComponent,
     HomeComponent,
     HeaderComponent,
@@ -25,6 +27,8 @@ import { CursorService } from './service/active-cursor.service';
     HorizontalTextComponent,
     NotFoundComponent,
     HeroSectionComponent,
+    ProjectCard,
+    ProjectSectionComponent
   ],
   imports: [
     BrowserModule,

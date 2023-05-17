@@ -18,14 +18,14 @@ export class LoadingComponent implements OnInit {
       targets: '.text-logo',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
-      duration: 5000,
+      duration: 2000,
       delay: function(el:any, i:number) { return i * 1000 },
       direction: 'alternate',
     })
 
     const tl = gsap.timeline()
     tl
-      .to('.text-logo ',{opacity:0,duration:.5,delay:2},1)
-      .to('.loading',{height:0,duration:1,delay:2},1)
+      .to('.text-logo ',{opacity:0,duration:.5},1)
+      .to('.loading',{height:0,duration:1},1)
   }
 }

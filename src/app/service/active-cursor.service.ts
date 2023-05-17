@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 @Injectable()
 export class CursorService {
     public active() {
-        console.log('aaa')
         gsap.set('.cursor', { xPercent: -50, yPercent: -50 })
 
         window.addEventListener('mousemove', e => {

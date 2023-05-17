@@ -1,20 +1,19 @@
 @import '../../../assets/scss/variable';
 
-.hero{
-  height: 100%;
+.hero {
+  min-height: calc(100vh - var(--height-header));
   padding: 20px 0;
 
   display: flex;
 
-  &__left{
+  &__left {
     color: $white-cl;
-
-    height: 100%;
     width: 50%;
 
     display: flex;
     align-items: center;
-    & p{
+
+    & p {
       line-height: 100%;
       width: 100%;
       text-align: center;
@@ -22,7 +21,7 @@
       font-size: 4rem;
       font-family: 'HN', sans-serif;
 
-      & span{
+      & span {
         text-transform: uppercase;
         color: $black-cl;
         background: $white-cl;
@@ -30,14 +29,14 @@
     }
   }
 
-  &__right{
+  &__right {
     width: 50%;
-    height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    & .model{
+
+    & .model {
       width: 400px;
       height: 400px;
     }

@@ -5,11 +5,11 @@ import anime from 'animejs'
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'app-checkout',
-  templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.scss']
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class CheckoutComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
   constructor(private titleService: Title) {}
 

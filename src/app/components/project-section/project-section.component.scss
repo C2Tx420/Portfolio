@@ -1,0 +1,25 @@
+.project {
+    min-height: calc(100vh - var(--height-header));
+
+    margin: 0 20%;
+
+    h2 {
+        font-family: 'HN', sans-serif;
+        font-size: 3.2rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: calc(100% + 10px);
+            width: 50px;
+            height: 10px;
+            background-color: #fff;
+        }
+    }
+
+    &-list {
+        margin-top: 40px;
+    }
+}
